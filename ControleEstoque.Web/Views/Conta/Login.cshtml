@@ -1,9 +1,9 @@
-﻿
+﻿@model ControleEstoque.Web.Models.LoginViewModel
 @{
     ViewBag.Title = "Login";
 }
 
-<div class="container">
+<div id ="login" class="container">
     <div class="row">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Conta", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
@@ -11,7 +11,7 @@
                 <div class="form-group">
                     @Html.LabelFor(m => m.Usuario, new { @class = "form-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.TextBox(m => m.Usuario, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.Usuario, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
@@ -22,8 +22,8 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-10 col-md-offset-2">
-                        @Html.CheckBoxFor(m=> m.LembrarMe)
-                        @Html.LabelFor(m=> m.LembrarMe)
+                        @Html.CheckBoxFor(m => m.LembrarMe)
+                        @Html.LabelFor(m => m.LembrarMe)
                     </div>
                 </div>
                 <div class="form-group">

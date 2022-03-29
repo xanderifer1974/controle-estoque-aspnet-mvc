@@ -23,9 +23,10 @@ textarea {
     max-width: 280px;
 }
 
-.container{
-    width:400px;
+#login {
+    width: 400px;
     margin: 0 auto;
+    padding-top:100px;
 }
 
 .titulo{
